@@ -6,7 +6,7 @@ interface Options {
 }
 
 interface Request {
-  prompt: string;
+  userPrompt: string;
   systemPrompt: string;
   responseSchema: Record<string, any>;
   model: string;
@@ -28,7 +28,7 @@ export default {
           return null;
         }
       },
-      async makeRequest({ prompt, systemPrompt, promptName, responseSchema, model }: Request): Promise<null | any> {
+      async makeRequest({ userPrompt, systemPrompt, promptName, responseSchema, model }: Request): Promise<null | any> {
         if (!prompt || !systemPrompt || !promptName || !model) {
           throw new Error('Next params are required: "prompt", "systemPrompt", "promptName", "model"');
         }
@@ -45,7 +45,7 @@ export default {
           response_format,
           messages: [
             { role: 'system', content: systemPrompt },
-            { role: 'user', content: prompt, },
+            { role: 'user', content: userPrompt, },
           ],
         });
         if (!completion?.choices[0].message.content) return null;

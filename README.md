@@ -1,5 +1,3 @@
-# @strapi/provider-email-sendgrid
-
 ## Resources
 
 - [LICENSE](LICENSE)
