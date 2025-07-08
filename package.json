@@ -1,6 +1,6 @@
 {
   "name": "strapi-provider-ai-openai",
-  "version": "0.0.2",
+  "version": "0.0.5",
   "scripts": {
     "build": "tsc -p tsconfig.json"
   },
@@ -28,7 +28,7 @@
     "npm": ">=6.0.0"
   },
   "peerDependencies": {
-    "@strapi/strapi": "5.0.0"
+    "@strapi/strapi": ">=5.0.0 <6.0.0"
   },
   "devDependencies": {}
 }

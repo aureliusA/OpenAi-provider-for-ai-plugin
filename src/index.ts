@@ -29,7 +29,7 @@ export default {
         }
       },
       async makeRequest({ userPrompt, systemPrompt, promptName, responseSchema, model }: Request): Promise<null | any> {
-        if (!prompt || !systemPrompt || !promptName || !model) {
+        if (!userPrompt || !systemPrompt || !promptName || !model) {
           throw new Error('Next params are required: "prompt", "systemPrompt", "promptName", "model"');
         }
         const response_format: ResponseFormatText | ResponseFormatJSONSchema = responseSchema ? { type: 'json_schema', json_schema: {
