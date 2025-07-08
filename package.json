@@ -1,0 +1,35 @@
+{
+  "name": "strapi-provider-ai-openai",
+  "version": "0.0.1",
+  "scripts": {
+    "build": "tsc -p tsconfig.json"
+  },
+  "author": {
+    "name": "Vadym Toporovskyi",
+    "email": "teoruz6@gmail.com"
+  },
+  "license": "MIT",
+  "description": "",
+  "dependencies": {
+    "openai": "^4.100.0"
+  },
+  "main": "./dist/index.js",
+  "source": "./src/index.ts",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist/"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aureliusA/strapi-plugin-autosave"
+  },
+  "engines": {
+    "node": ">=18.0.0 <=22.x.x",
+    "npm": ">=6.0.0"
+  },
+  "peerDependencies": {
+    "@strapi/strapi": "5.0.0"
+  },
+  "devDependencies": {}
+}
+
